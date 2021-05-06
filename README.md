@@ -18,7 +18,7 @@ Option  1 - Download zip
 
 Option 2 - Git clone
 
-1. Run 'git clone https://github.com/upgradeya/redmine-contracts-with-time-tracking-plugin.git plugins/contracts' from your redmine root directory
+1. Run 'git clone https://github.com/guitooliveira/redmine-contracts-with-time-tracking-plugin.git plugins/contracts' from your redmine root directory
   * Note : use 'git submodule add' instead of 'git clone' if your install folder is part of a git project.
 1. This step is only for Redmine 2 - After you run the git command above, cd into the contracts directory and run 'git checkout tags/v1.3.1'
 1. run 'rake redmine:plugins:migrate RAILS_ENV=production' from your redmine root directory
@@ -43,7 +43,7 @@ Changelog
 Contracts v3 2021-5-5
 -----------------------
 - Support to redmine 4.1.1
-- 
+ 
 Contracts v2.2 2017-3-6
 -----------------------
 - Added a recurring contract option so you that can have fixed contracts created automatically each month or year.
