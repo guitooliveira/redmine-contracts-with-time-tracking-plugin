@@ -18,8 +18,8 @@
       <th><%= l(:label_remaining) %></th>
       <th><%= l(:label_hours_worked) %></th>
       <th><%= l(:label_hours_left) %></th>
-      <th><%= l(:label_contract) %></th>
-      <th><%= l(:label_invoice) %></th>
+      <th><%= l(:field_contract_url) %></th>
+      <th><%= l(:field_invoice_url) %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -58,12 +58,12 @@
         <td class="blue"><%= number_with_precision contract.hours_remaining, :precision => 2 %></td>
         <td>
           <% if !contract.contract_url.blank? %>
-            <%= link_to image_tag("/images/files/text.png"), contract.contract_url %>
+            <%= contract.contract_url %>
           <% end %>
         </td>
         <td>
           <% if !contract.invoice_url.blank? %>
-            <%= link_to image_tag("/images/files/text.png"), contract.invoice_url %>
+            <%= contract.invoice_url %>
           <% end %>
         </td>
         <td>

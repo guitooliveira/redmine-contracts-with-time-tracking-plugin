@@ -26,7 +26,7 @@ module Contracts
         protected
         def time_not_exceed_contract
           return if hours.blank?
-          return if contract.is_fixed_price
+          return if contract.nil? || contract.is_fixed_price
           previous_hours = (hours_was != nil) ? hours_was : 0 
 
           if contract_id != nil
@@ -47,7 +47,7 @@ module Contracts
         # is enabled and the hours exceed the current contract.
         private
         def create_next_contract
-          return if contract.is_fixed_price
+          return if contract.nil? || contract.is_fixed_price
           previous_hours = (hours_was != nil) ? hours_was : 0
           if Setting.plugin_contracts['automatic_contract_creation'] && hours > (contract.hours_remaining + previous_hours)
             new_contract = Contract.new

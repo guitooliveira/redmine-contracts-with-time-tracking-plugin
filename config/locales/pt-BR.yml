@@ -1,6 +1,15 @@
 pt-BR:
+  contract_types:
+    hourly: "Time material"
+    fixed: "Escopo fechado"
+    recurring: "Fixo-recorrente"
+  recurring_frequencies:
+    monthly: "Mensal"
+    yearly: "Anual"
+    completed: "Completo"
+    not_recurring: "Não"
   project_module_contratos: Contratos
-  permission_view_all_contratos_for_project: Visualizar todos contratos do projeto
+  permission_view_all_contratos_for_project: Visualizar todos contratos do workspace
   permission_view_contract_details: Exibir detalhes do contrato
   permission_edit_contratos: Editar contratos
   permission_create_contratos: Criar contratos
@@ -37,7 +46,7 @@ pt-BR:
   label_current_contract: Contrato Atual
   label_member: Membro
   label_activity: Atividade
-  label_issue: Tarefa
+  label_issue: Ticket
   label_comments: Comentários
   label_apply: Aplicar
   label_name: Nome
@@ -71,24 +80,54 @@ pt-BR:
   text_contract_deleted: Contrato excluído com sucesso
   text_hours_over_contract: "Você está com um desvio de %{hours_over} horas acima do número de horas contradas."
   text_invalid_rate: "Taxa por Hora deve ser não pode ser negativa ou nula."
-  text_invalid_issue_id: "não é um ID válido de Tarefa"
+  text_invalid_issue_id: "não é um ID válido de ticket"
   text_expense_created: 'Despesa criada com sucesso.'
   text_expense_updated: 'Despesa atualizada com sucesso.'
+  text_hours_too_large: is invalid. The amount exceeds the time remaining plus the size of a new contract.
+  text_invalid_rate: "Contractor rate must be zero or greater."
+  text_invalid_issue_id: "is not a valid issue ID"
+  text_invalid_hours: "is invalid. The contract %{title} only has %{hours} remaining. Ask your administrator to enable auto contract creation in contract settings."
+  text_second_time_entry_failure: "something went wrong. The 2nd entry for this split time entry could not be saved. %{error}"
+  text_auto_contract_failure: "something went wrong. The new contract for this split time entry could not be saved. %{error}"
+  text_expense_created: 'Expense was successfully created.'
+  text_expense_updated: 'Expense was successfully updated.'
+  text_agreement_pending: 'agreement pending'
+  text_no_end_date: 'no end date'
   text_na: 'N/A'
+  text_contract_locked: Contract was successfully locked.
+  text_contract_unlocked: Contract was successfully unlocked.
+  text_locked_contract_cache_updated: This entry is associated with a locked contract. The contract's cached values have been updated to reflect your changes.
+  text_expenses_uneditable: Expenses for this contract are not editable (contract is locked).
+  text_expense_deleted: Expense deleted.
+  text_apply: Apply
+  text_previous_id: "The last contract created for this project used ID %{previous_id}"
+  text_contract_category_helper: "[Optional] If title is not provided, the default title will use this category. These are managed by enumerations."
+  text_contract_title_helper: "[Optional] Used to override the default title."
+  text_hourly_rate_helper: "Helpful in determining how much to pay a contractor. Has nothing to do with the effective hourly rate."
+  text_hour: / hr
+  text_fixed_contract_help: Fixed contracts are ideal when you are being paid a fixed price. Fixed Price contracts will display under the fixed contracts tab on the Contracts List page. In fixed contracts, time entries will determine your effective hourly rate and will not subtract from the Purchase Amount. The hourly rate field simply helps you determine what to pay potential contractors that are working on the project.
+  text_recurring_contract_help: Recurring contracts are ideal for subscriptions. Recurring contracts will display under the fixed contracts tab on the Contracts List page. They are identified under the "Recurring" column. Fixed Price Recurring contracts are just like fixed contracts except they will automatically create new contracts based on recurring schedule.
+  text_hourly_contract_help: Hourly contracts are ideal when you are being paid by the hour. Hourly contracts will display under the hourly contracts tab on the Contract List page. In hourly contracts, time entries (at the contractors hourly rate) will subtract from the Purchase Amount. If selected in the Contract Plugin settings, you can have new contracts automatically be created when time log entry exceeds the current Purchase Amount.
+
 
   field_contract: Contrato
   field_title: Título
   field_description: Descrição
-  field_agreement_date: Data Aceite Contrato
-  field_start_date: Data Início
-  field_end_date: Data Término
-  field_purchase_amount: Valor Vendido
-  field_hourly_rate: Taxa por Hora
-  field_contract_url: Contrato URL
-  field_invoice_url: Fatura URL
+  field_agreement_date: Data de aceite do contrato
+  field_start_date: Data início
+  field_end_date: Data término
+  field_purchase_amount: Valor vendido
+  field_hourly_rate: Taxa por hora
+  field_contract_url: Pedido de compra
+  field_invoice_url: Num invoice
+  field_is_fixed_price: Escopo fechado
+  field_contract_type: Tipo de contrato
+  field_recurring_frequency: Frequencia
 
   field_expense_name: Nome
-  field_expense_date: Data Despesa
+  field_expense_date: Data despesa
   field_amount: Valor
   field_expense_contract: Contrato
-  field_issue: Tarefa (ID)
+  field_issue: Ticket (ID)
+
+  enumeration_contract_categories: Categoria de contrato
