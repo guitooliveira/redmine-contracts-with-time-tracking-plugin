@@ -40,6 +40,10 @@ Screenshots
 
 Changelog
 ---------
+Contracts v3 2021-5-5
+-----------------------
+- Support to redmine 4.1.1
+- 
 Contracts v2.2 2017-3-6
 -----------------------
 - Added a recurring contract option so you that can have fixed contracts created automatically each month or year.
