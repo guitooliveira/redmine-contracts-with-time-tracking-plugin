@@ -38,10 +38,12 @@ module Contracts
             all_options = no_contract_option << db_options
           else
             # Contract selected has already been locked. Do not show the [Select Contract] label.
-            all_options = db_options
+            all_options = ''
           end
-          select = context[:form].select :contract_id, all_options
-          return "<p>#{select}</p>"
+          if !all_options.blank?
+            select = context[:form].select :contract_id, all_options
+            return "<p>#{select}</p>"
+          end
         end
       else
         "<p>This page will not work due to the contracts plugin. You must log time entries from within a project."
